@@ -13,6 +13,16 @@ export const Navbar = () => {
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const sections = [
+    "home",
+    "about",
+    "education",
+    "skills",
+    "experience",
+    "projects",
+    "contact"
+  ];
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/10">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
@@ -25,10 +35,10 @@ export const Navbar = () => {
         <div className="hidden md:block">
           <NavigationMenu>
             <NavigationMenuList>
-              {["home", "about", "experience", "projects", "contact"].map((section) => (
+              {sections.map((section) => (
                 <NavigationMenuItem key={section}>
                   <NavigationMenuLink
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-white/10 hover:text-primary focus:bg-white/10 focus:text-primary focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                     onClick={() => scrollToSection(section)}
                   >
                     {section.charAt(0).toUpperCase() + section.slice(1)}
