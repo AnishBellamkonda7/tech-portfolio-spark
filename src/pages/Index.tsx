@@ -6,13 +6,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Github, Linkedin, FileText, Mail, Phone } from "lucide-react";
 import emailjs from '@emailjs/browser';
+import { Navbar } from "@/components/Navbar";
+import { AnimatedBackground } from "@/components/AnimatedBackground";
 
 const Index = () => {
   const [typewriterText, setTypewriterText] = useState("");
   const texts = [
     "Software Developer",
     "AI Enthusiast",
-    "Cloud Practitioner",
     "Full-Stack Developer"
   ];
   const { toast } = useToast();
@@ -77,37 +78,40 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black text-white">
+      <Navbar />
+      <AnimatedBackground />
+      
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center gradient-bg text-white section-padding">
-        <div className="text-center animate-fade-up">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+      <section className="min-h-screen flex items-center justify-center relative section-padding" id="home">
+        <div className="text-center animate-fade-up relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-up">
             Hi, I'm Anish Bellamkonda
           </h1>
-          <p className="text-xl md:text-2xl mb-8">
+          <p className="text-xl md:text-2xl mb-8 animate-fade-up delay-100">
             A Software Developer passionate about solving real-world problems through technology.
           </p>
           <div className="h-8 mb-8">
             <span className="text-xl md:text-2xl font-medium">{typewriterText}</span>
           </div>
-          <div className="flex gap-4 justify-center">
+          <div className="flex gap-4 justify-center animate-fade-up delay-200">
             <Button
               variant="outline"
-              className="bg-white/10 hover:bg-white/20"
+              className="bg-white/10 hover:bg-white/20 text-white border-white/20"
               onClick={() => window.open("https://github.com/AnishBellamkonda", "_blank")}
             >
               <Github className="mr-2" /> GitHub
             </Button>
             <Button
               variant="outline"
-              className="bg-white/10 hover:bg-white/20"
+              className="bg-white/10 hover:bg-white/20 text-white border-white/20"
               onClick={() => window.open("https://www.linkedin.com/in/anish-bellamkonda/", "_blank")}
             >
               <Linkedin className="mr-2" /> LinkedIn
             </Button>
             <Button
               variant="outline"
-              className="bg-white/10 hover:bg-white/20"
+              className="bg-white/10 hover:bg-white/20 text-white border-white/20"
               onClick={() => window.open("#", "_blank")}
             >
               <FileText className="mr-2" /> Resume
