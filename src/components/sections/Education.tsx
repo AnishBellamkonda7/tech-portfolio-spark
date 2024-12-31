@@ -22,7 +22,7 @@ export const Education = () => {
   return (
     <section className="py-32 mt-16" id="education">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-primary font-playfair text-center">Education</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-white hover:text-primary transition-colors duration-300 animate-fade-up font-playfair text-center">Education</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {education.map((edu, index) => (
             <Card key={index} className="p-8 bg-black/50 backdrop-blur-sm border-white/10 hover:border-primary/50 transition-all duration-300 card-hover">

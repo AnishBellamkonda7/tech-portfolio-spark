@@ -38,7 +38,7 @@ export const Skills = () => {
   return (
     <section className="py-32 mt-16" id="skills">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-primary font-playfair text-center">Skills</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-white hover:text-primary transition-colors duration-300 animate-fade-up font-playfair text-center">Skills</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <Card key={index} className="p-8 bg-black/50 backdrop-blur-sm border-white/10 hover:border-primary/50 transition-all duration-300 card-hover">
