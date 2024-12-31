@@ -13,7 +13,7 @@ export const Contact = () => {
   return (
     <section className="py-32" id="contact">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Get In Touch</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-primary font-playfair">Get In Touch</h2>
         <Card className="p-8 bg-black/50 backdrop-blur-sm border-white/10">
           <div className="grid gap-6 md:grid-cols-2">
             <Button

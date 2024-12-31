@@ -1,4 +1,4 @@
-import { Code, Monitor, Server, Cloud, Database, Brain, Wrench } from "lucide-react";
+import { Code, Monitor, Server, Cloud, Database, Brain } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 export const Skills = () => {

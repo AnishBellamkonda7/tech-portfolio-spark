@@ -25,7 +25,7 @@ export const Experience = () => {
   return (
     <section className="py-32" id="experience">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Experience</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-primary font-playfair">Experience</h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {experiences.map((exp, index) => (
             <Card 
