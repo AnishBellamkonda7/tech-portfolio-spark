@@ -41,47 +41,45 @@
   }
 }
 
-.gradient-bg {
-  background: linear-gradient(135deg, #8B5CF6 0%, #F472B6 100%);
-}
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, #8B5CF6 0%, #F472B6 100%);
+  }
 
-.card-hover {
-  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
-}
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+  }
 
-.section-padding {
-  @apply py-20 px-4 md:px-8 lg:px-16;
-}
+  .section-padding {
+    @apply py-20 px-4 md:px-8 lg:px-16;
+  }
 
-.text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-secondary;
-}
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-secondary;
+  }
 
-.hover-glow {
-  @apply transition-all duration-300 hover:text-primary hover:animate-glow;
-}
+  .hover-glow {
+    @apply transition-all duration-300 hover:text-primary hover:animate-glow;
+  }
 
-.section-heading {
-  @apply text-4xl md:text-5xl font-bold text-center mb-16 text-white 
-         hover:text-gradient transition-all duration-500 
-         animate-fade-up font-playfair 
-         hover:scale-105 transform-gpu;
-}
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold text-center mb-16 text-white;
+    @apply transition-all duration-500 animate-fade-up font-playfair;
+    @apply hover:scale-105 transform-gpu;
+    &:hover {
+      @apply text-gradient;
+    }
+  }
 
-.card-content {
-  @apply transition-all duration-300 
-         hover:text-primary-hover 
-         group-hover:translate-x-1;
-}
+  .card-content {
+    @apply transition-all duration-300 hover:text-primary-hover group-hover:translate-x-1;
+  }
 
-.interactive-link {
-  @apply relative inline-block 
-         after:content-[''] after:absolute 
-         after:w-full after:scale-x-0 
-         after:h-0.5 after:bottom-0 
-         after:left-0 after:bg-accent 
-         after:origin-bottom-right 
-         after:transition-transform after:duration-300 
-         hover:after:scale-x-100 
-         hover:after:origin-bottom-left;
+  .interactive-link {
+    @apply relative inline-block;
+    @apply after:content-[''] after:absolute after:w-full after:scale-x-0;
+    @apply after:h-0.5 after:bottom-0 after:left-0 after:bg-accent;
+    @apply after:origin-bottom-right after:transition-transform after:duration-300;
+    @apply hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
 }
