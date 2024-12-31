@@ -22,24 +22,28 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#000000",
-        foreground: "#FFFFFF",
+        background: "#0F172A",
+        foreground: "#E2E8F0",
         primary: {
           DEFAULT: "#8B5CF6",
           foreground: "#FFFFFF",
+          hover: "#9333EA",
         },
         secondary: {
-          DEFAULT: "#7E69AB",
+          DEFAULT: "#7C3AED",
           foreground: "#FFFFFF",
+          hover: "#6D28D9",
         },
         accent: {
-          DEFAULT: "#6E59A5",
+          DEFAULT: "#F472B6",
           foreground: "#FFFFFF",
+          hover: "#EC4899",
         },
         muted: {
-          DEFAULT: "#1A1A1A",
-          foreground: "#A1A1AA",
+          DEFAULT: "#1E293B",
+          foreground: "#94A3B8",
         },
+        highlight: "#F472B6",
       },
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
@@ -71,6 +75,24 @@ export default {
             transform: "translateY(0)",
           },
         },
+        "slide-in": {
+          "0%": {
+            transform: "translateX(-100%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
+        "glow": {
+          "0%, 100%": {
+            textShadow: "0 0 10px rgba(139, 92, 246, 0.5)",
+          },
+          "50%": {
+            textShadow: "0 0 20px rgba(139, 92, 246, 0.8)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -78,6 +100,8 @@ export default {
         typing: "typing 3.5s steps(40, end)",
         "cursor-blink": "blink 1s step-end infinite",
         "fade-up": "fade-up 0.5s ease-out forwards",
+        "slide-in": "slide-in 0.6s ease-out forwards",
+        "glow": "glow 2s ease-in-out infinite",
       },
     },
   },
